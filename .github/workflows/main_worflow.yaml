@@ -20,7 +20,10 @@ jobs:
       - name: Instalando dependencias
         run: npm install
 
-      - name: Run nos testes
-        run: npm test
+      - name: Verificar versão do npm
+        run: npm -v
+
+      - name: Executando testes
+        run: npm test 
 
      
