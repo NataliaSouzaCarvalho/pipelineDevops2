@@ -29,3 +29,7 @@ jobs:
 
       - name: Coverage files
         run: ls -la
+
+      - name: Report
+        run: |
+          coverage report
