@@ -27,7 +27,7 @@ jobs:
       - name: App_Test
         run: |
           echo "Listing test files..."
-          find . -name "*_test.py"
+          find . -name "app_test.py"
 
       - name: Teste com coverage
         run: coverage run -m unittest discover
