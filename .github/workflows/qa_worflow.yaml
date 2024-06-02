@@ -1,0 +1,28 @@
+name: Pipeline para QA
+on:
+  push:
+    branches:
+      - QA
+jobs:
+  build:
+    name: Build QA
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do cod
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Instalando dependencias
+        run: npm install
+
+      - name: Run nos testes
+        run: npm test
+
+      - name: Mensagem
+        run: echo Usando a branch de QA
+      
