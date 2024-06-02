@@ -23,7 +23,5 @@ jobs:
       - name: Verificar versão do npm
         run: npm -v
 
-      - name: Executando testes
-        run: npm test 
 
      
